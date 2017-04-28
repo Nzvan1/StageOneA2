@@ -1,13 +1,21 @@
-private String name;
-private WeatherService service ; 
-private JLabel lbl ;
+package weatherTextFrMW;
+
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Rainfall implements WeatherMonitor {
+	
+	private String name;
+	private WeatherService service ; 
+private JLabel lblRainfall ;
 
 	
 	private String rainfall; 
 public Rainfall(String name, WeatherService w) {
  this.name = name; 
  this.service =w; 
- this.lbl= new JLabel();
+ this.lblRainfall = new JLabel();
 }
 	public String getRainfall() {
 	      return rainfall;
@@ -24,11 +32,11 @@ public Rainfall(String name, WeatherService w) {
 	       public void display(){
 	    	if (SettingSingleton.getInstance().getRainSetting()== true){
 	    	
-	    	lbl.setText( "\n\tRainfall:\t" + this.getRainfall());
-	       lbl.setSize(400, 30);
+	    	lblRainfall.setText( "\n\tRainfall:\t" + this.getRainfall());
+	       lblRainfall.setSize(400, 30);
 	    	
 	    	
-	    	Console.addComp((JComponent) lbl);}
+	    	Console.addComp((JComponent) lblRainfall);}
 	    		
 
 	    	
