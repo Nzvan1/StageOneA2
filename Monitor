@@ -13,7 +13,7 @@ private ArrayList<WeatherMonitor> weatherMonitors;
 public Monitor(String name, ArrayList<WeatherMonitor>  w){
 	this.name = name; 
 	this.weatherMonitors = w; 
-	//loc.add(this); 
+	
 }
 
 public String getNam(){
