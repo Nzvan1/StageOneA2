@@ -1,0 +1,9 @@
+package weatherTextFrMW;
+
+public interface WeatherMonitor {
+	public  void display();
+	public void update(); 
+}
+
+//We assume that in terms of having more than one monitor per location 
+//this imply that we have more than one kind of weather monitor for example temperature and/or rainfall
