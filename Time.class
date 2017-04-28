@@ -1,0 +1,52 @@
+package weatherTextFrMW;
+
+import java.rmi.RemoteException;
+
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import org.apache.axis2.AxisFault;
+
+import melbourneweather2.ExceptionException;
+import melbourneweather2.MelbourneWeather2Stub;
+import melbourneweather2.MelbourneWeather2Stub.GetRainfall;
+import melbourneweather2.MelbourneWeather2Stub.GetRainfallResponse;
+
+public class Time implements WeatherMonitor {
+private String timestamp ; 
+private JLabel lblTime;
+
+private String name;
+private WeatherService service; 
+
+
+
+public Time(String name, WeatherService w) throws AxisFault{
+this.name = name;
+this.service =w; 
+this.lblTime= new JLabel();
+update();
+}
+public String getTime() {
+	
+      return this.timestamp;
+   }
+   
+   public void update() {
+	 
+	this.timestamp = (this.service).getTime(this.name); 
+	  
+	   
+   
+}
+     
+   // Called to display output in the JTextArea
+      
+       public  void display(){
+    	
+    	lblTime.setText( ("\n\t@ Time:\t" + getTime()));
+    	lblTime.setSize(400, 30);
+    	Console.addComp((JComponent) lblTime);
+       }
+}
