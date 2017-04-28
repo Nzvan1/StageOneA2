@@ -3,14 +3,12 @@ package weatherTextFrMW;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import javax.swing.*;
-import javax.swing.border.EtchedBorder;
+
 
 
 
@@ -71,7 +69,7 @@ public void createInterface() throws Exception{
 	scInfo.setSize( 350, 450);
 	scInfo.setLocation(15,50);
 	
-    //scInfo.setLayout(new BoxLayout(scInfo, BoxLayout.PAGE_AXIS));
+   
 	scInfo.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	
 	//RIGHT Scroll Pane 
@@ -79,7 +77,6 @@ public void createInterface() throws Exception{
 	scLocations.setLocation(395 ,75);
 	scLocations.setSize(350, 425); 
 	scLocations.setBackground(Color.WHITE);
-	//cLocations.setLayout(new BoxLayout(scInfo, BoxLayout.PAGE_AXIS));
 	scLocations.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 	scLocations.setAlignmentX(Component.LEFT_ALIGNMENT);
 	
@@ -149,12 +146,6 @@ public void createInterface() throws Exception{
 		 
 	 }
 	 
-	 
-	 
-
-
-		
-       
  // View buttons must be clicked to process settings    
     JButton view = new JButton( "View");
 	view.setSize(100, 40);
@@ -191,7 +182,7 @@ public void createInterface() throws Exception{
 		     }
 		     else {
 		    	 JOptionPane.showMessageDialog(frame, 
-							"Please select locations to view and weather settings");
+							"Please select a location to view and a weather settings");
 		     
 		}
 		}	 
@@ -199,11 +190,12 @@ public void createInterface() throws Exception{
 		
 		});
 	
-	frame.add(view);
+	
     
 	
 	
 	//Add components to Frame 
+	frame.add(view);
 	frame.add(scInfo);
 	frame.add(scLocations); 
 	frame.add(lblWeather);
@@ -226,6 +218,7 @@ public void createInterface() throws Exception{
 			}, 0,300000);
 		 
 }
+/// Set location list that is used to populate the CheckBox Labels 
 
 public void setLocationsList(String[] l){
 	this.locations =l ; 
