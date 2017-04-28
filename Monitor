@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 public class Monitor implements Observer{
 private String name; 
 private ArrayList<WeatherMonitor> weatherMonitors;
-//private ArrayList<Location> loc;
+
 
 public Monitor(String name, ArrayList<WeatherMonitor>  w){
 	this.name = name; 
