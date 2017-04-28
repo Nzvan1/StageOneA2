@@ -36,7 +36,8 @@ public Rainfall(String name, WeatherService w) {
 	       lblRainfall.setSize(400, 30);
 	    	
 	    	
-	    	Console.addComp((JComponent) lblRainfall); // any jcompoent can be add to the jpanel }
+	    	Console.addComp((JComponent) lblRainfall); // any jcomponent can be added to the jpanel
+ }
 	    		
 
 	    	
