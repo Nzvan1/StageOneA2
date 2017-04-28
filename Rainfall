@@ -22,13 +22,13 @@ public Rainfall(String name, WeatherService w) {
 	   }
 	   
 	   public void update() {
-		   if(SettingSingleton.getInstance().getRainSetting()== true){
+		   if(SettingSingleton.getInstance().getRainSetting()== true){ // The singleton is used to prevent addition network traffic 
 			   this.rainfall =service.getRainfall(this.name); 
 			  
 		   }
 	   }
 	     
-	   // Called to display output in the JTextArea
+	   // Called to display output in the JTextArea 
 	       public void display(){
 	    	if (SettingSingleton.getInstance().getRainSetting()== true){
 	    	
@@ -36,7 +36,7 @@ public Rainfall(String name, WeatherService w) {
 	       lblRainfall.setSize(400, 30);
 	    	
 	    	
-	    	Console.addComp((JComponent) lblRainfall);}
+	    	Console.addComp((JComponent) lblRainfall); // any jcompoent can be add to the jpanel }
 	    		
 
 	    	
