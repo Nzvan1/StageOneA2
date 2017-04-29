@@ -16,7 +16,7 @@ public Monitor(String name, ArrayList<WeatherMonitor>  w){
 	
 }
 
-public String getNam(){
+public String getName(){
 	return this.name; 
 }
 public void setName( String name){
