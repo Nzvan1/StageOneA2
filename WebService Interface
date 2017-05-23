@@ -1,8 +1,0 @@
-package weatherTextFrMW;
-
-public interface WeatherService {
-  public String[] getLocations(); 
-  public String getTemperature(String n); 
-  public String getRainfall(String n); 
-  public String getTime(String n ); 
-}
