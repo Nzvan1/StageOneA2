@@ -24,6 +24,7 @@ public class CMonView {
 	/**
 	 * @param m
 	 */
+	/* sets the  monitor */
 	public CMonView(CumulativeMonitor m) {
 
 		this.m = m;
@@ -49,17 +50,17 @@ public class CMonView {
 		this.chartFrame.setVisible(true);
 
 	}
-
+		/**adds values to the chart */ 
 	public void addToDataset(double data, String type, String time) {
 
-		this.dataset.addValue(data, type, time); // add values to chart
+		this.dataset.addValue(data, type, time); 
 		this.chartFrame.revalidate();
 		this.chartFrame.repaint();
 
 	}
 
 	/**
-	 * close window for frame
+	 * closes the window frame
 	 */
 	public void closeWindow() {
 		this.m.removeView(this);
