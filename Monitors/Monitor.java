@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import obsPattern.Subject;
 import weatherData.WeatherMonitor;
 
+/* inherits properties from the general monitor for text monitor type */
 public class Monitor extends GeneralMonitor {
 	private String name;
 	private ArrayList<WeatherMonitor> weatherMonitors;
