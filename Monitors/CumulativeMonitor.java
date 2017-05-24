@@ -26,7 +26,7 @@ public class CumulativeMonitor extends GeneralMonitor {
 
 		this.views = new ArrayList<CMonView>();
 		addView();
-		// loc.add(this);
+		
 	}
 
 	/*
@@ -70,7 +70,7 @@ public class CumulativeMonitor extends GeneralMonitor {
 			v.update();
 		}
 	}
-
+	/* removes monitor from view */ 
 	public void removeView(CMonView v) {
 
 		this.views.remove(v);
