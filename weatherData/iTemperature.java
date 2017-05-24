@@ -1,8 +1,11 @@
 package weatherData;
 
 public interface iTemperature {
-	 
-	  public String getTemperature(String n); 
-	 
+
+	/**
+	 * @param n
+	 * @return get temperature data for location from weather service
+	 */
+	public String getTemperature(String n);
 
 }
