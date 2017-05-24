@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import obsPattern.Subject;
 import weatherData.WeatherMonitor;
 
+/* Inherits properties to make the graph monitor type */ 
 public class GraphMonitor extends GeneralMonitor {
 	private String name;
 	private ArrayList<WeatherMonitor> weatherMonitors;
