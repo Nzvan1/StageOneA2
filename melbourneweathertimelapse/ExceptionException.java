@@ -1,4 +1,3 @@
-
 /**
  * ExceptionException.java
  *
@@ -8,36 +7,34 @@
 
 package melbourneweathertimelapse;
 
-public class ExceptionException extends java.lang.Exception{
+public class ExceptionException extends java.lang.Exception {
 
-    private static final long serialVersionUID = 1493749342460L;
-    
-    private melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE faultMessage;
+	private static final long serialVersionUID = 1493749342460L;
 
-    
-        public ExceptionException() {
-            super("ExceptionException");
-        }
+	private melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE faultMessage;
 
-        public ExceptionException(java.lang.String s) {
-           super(s);
-        }
+	public ExceptionException() {
+		super("ExceptionException");
+	}
 
-        public ExceptionException(java.lang.String s, java.lang.Throwable ex) {
-          super(s, ex);
-        }
+	public ExceptionException(java.lang.String s) {
+		super(s);
+	}
 
-        public ExceptionException(java.lang.Throwable cause) {
-            super(cause);
-        }
-    
+	public ExceptionException(java.lang.String s, java.lang.Throwable ex) {
+		super(s, ex);
+	}
 
-    public void setFaultMessage(melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE msg){
-       faultMessage = msg;
-    }
-    
-    public melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE getFaultMessage(){
-       return faultMessage;
-    }
+	public ExceptionException(java.lang.Throwable cause) {
+		super(cause);
+	}
+
+	public void setFaultMessage(
+			melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE msg) {
+		faultMessage = msg;
+	}
+
+	public melbourneweathertimelapse.MelbourneWeatherTimeLapseStub.ExceptionE getFaultMessage() {
+		return faultMessage;
+	}
 }
-    

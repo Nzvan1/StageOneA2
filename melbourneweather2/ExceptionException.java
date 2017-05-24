@@ -1,4 +1,3 @@
-
 /**
  * ExceptionException.java
  *
@@ -8,36 +7,34 @@
 
 package melbourneweather2;
 
-public class ExceptionException extends java.lang.Exception{
+public class ExceptionException extends java.lang.Exception {
 
-    private static final long serialVersionUID = 1493483857339L;
-    
-    private melbourneweather2.MelbourneWeather2Stub.ExceptionE faultMessage;
+	private static final long serialVersionUID = 1493483857339L;
 
-    
-        public ExceptionException() {
-            super("ExceptionException");
-        }
+	private melbourneweather2.MelbourneWeather2Stub.ExceptionE faultMessage;
 
-        public ExceptionException(java.lang.String s) {
-           super(s);
-        }
+	public ExceptionException() {
+		super("ExceptionException");
+	}
 
-        public ExceptionException(java.lang.String s, java.lang.Throwable ex) {
-          super(s, ex);
-        }
+	public ExceptionException(java.lang.String s) {
+		super(s);
+	}
 
-        public ExceptionException(java.lang.Throwable cause) {
-            super(cause);
-        }
-    
+	public ExceptionException(java.lang.String s, java.lang.Throwable ex) {
+		super(s, ex);
+	}
 
-    public void setFaultMessage(melbourneweather2.MelbourneWeather2Stub.ExceptionE msg){
-       faultMessage = msg;
-    }
-    
-    public melbourneweather2.MelbourneWeather2Stub.ExceptionE getFaultMessage(){
-       return faultMessage;
-    }
+	public ExceptionException(java.lang.Throwable cause) {
+		super(cause);
+	}
+
+	public void setFaultMessage(
+			melbourneweather2.MelbourneWeather2Stub.ExceptionE msg) {
+		faultMessage = msg;
+	}
+
+	public melbourneweather2.MelbourneWeather2Stub.ExceptionE getFaultMessage() {
+		return faultMessage;
+	}
 }
-    

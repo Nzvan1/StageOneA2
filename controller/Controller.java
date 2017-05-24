@@ -33,6 +33,9 @@ public class Controller {
 
 
 	}
+	/**
+	 * @return
+	 */
 	public static Controller getInstance(){
 		if (controller== null ){
 			return controller = new Controller(); 
@@ -42,6 +45,12 @@ public class Controller {
 		}
 	}
 
+	/**
+	 * @param location
+	 * @param monType
+	 * @param service
+	 * @param weatherData
+	 */
 	public void createMonitor(String location, String monType,String service, ArrayList<String>weatherData){ 
 
 		WeatherService webService =  null;
@@ -57,7 +66,7 @@ public class Controller {
 		for ( int i = 0 ; i< weatherData.size(); i++){
 			weatherMonitors.add( weatherF.getWeatherMonitor(weatherData.get(i),webService));}
 
-		//Check if the monitor is already create if so add a view instead
+		//Check if the monitor is already created if so add a view instead
 		boolean view = false ;
 
 		for(int a = 0 ; a < created.size() ; a++){
@@ -105,27 +114,27 @@ public class Controller {
 
 
 			if( service =="MelbournWeather2"){
-				
+				monitor.setSubject(update);
 				o = monitor;
 				
 				o.update();
-				update.attach(o);
+				update.attach(o); //set subject for melbournetimelaspe
 
 
 
 			}
 
 			if (service =="MelbourneTimelapse"){
-				monitor.setSubject(update20);
+				monitor.setSubject(update20); //set subject for melbournetimelaspe
 				o = monitor ; 
 				o.update();
-				update20.attach(o); 
+				update20.attach(o);   //set subject for melbournetimelaspe
 
 			}
 
 		}
 		else{
-			monitor.addView(); 
+			monitor.addView(); // if monitor created only create view  
 
 		}
 	}

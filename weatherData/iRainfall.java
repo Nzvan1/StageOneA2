@@ -2,6 +2,11 @@ package weatherData;
 
 public interface iRainfall {
 
-	  public  String getRainfall(String n); 
-	 
+	/**
+	 * @param n
+	 * @return get the rainfall data for location for service
+	 */
+
+	public String getRainfall(String n);
+
 }

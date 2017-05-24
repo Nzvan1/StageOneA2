@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import weatherData.WeatherMonitor;
 
 public interface iMonitorFactory {
-	
-	public GeneralMonitor getMonitor(String Type,ArrayList<WeatherMonitor> weatherMonitors , String name ); 
+
+	public GeneralMonitor getMonitor(String Type,
+			ArrayList<WeatherMonitor> weatherMonitors, String name);
 
 }

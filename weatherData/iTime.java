@@ -2,5 +2,10 @@ package weatherData;
 
 public interface iTime {
 
-	  public String getTime(String n ); 
+	/**
+	 * @param n
+	 * @return String of weather data  
+	 * get time of weather update
+	 */
+	public String getTime(String n);
 }
