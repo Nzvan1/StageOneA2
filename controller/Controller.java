@@ -102,7 +102,7 @@ public class Controller {
 
 
 		if (view == false){
-			System.out.println("Creats Monitor");
+			System.out.println("Create Monitor");
 			monitor = monitorf.getMonitor(monType, weatherMonitors,location);
 			
 			created.add(monitor);
